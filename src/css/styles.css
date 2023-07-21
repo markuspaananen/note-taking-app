@@ -1,27 +1,84 @@
+* {
+  font-family: 'IBM Plex Mono', monospace;
+}
+.flex-container {
+  display: flex;
+}
+
 .react-grid-layout {
     position: relative;
     transition: height 200ms ease;
+    margin-top: 10px; 
+    border: 3px solid black;
+    border-radius: 6px;
   }
   .react-grid-item {
     transition: all 200ms ease;
     transition-property: left, top;
+    border-radius: 4px;
   }
+  .deletebuttondiv{
+    background-color: rgb(94, 204, 255);
+    padding: 0.5ex;
+    float: right;
+    text-align: right;
+    width: 1.4em;
+    border-radius: 4px;
+
+  }
+  .deletebutton:hover {
+    background-color: red;
+  }
+  .Container-card-title{
+    width: 100%;
+    background-color: rgb(94, 204, 255);
+  }
+  .cardTitle {
+    background-color: rgb(94, 204, 255);
+    float: left;
+    padding: 3px;
+    padding-left: 10px;
+    max-width: 55%;
+  }
+.cardContent{
+  padding: 3px;
+  padding-left: 10px;
+  max-height: 100%;
+  
+
+}
+
+  .react-grid-item:not(.react-grid-placeholder) {
+    background: #ffffff;
+    border: 1px solid black;
+    box-shadow: 2px 2px;
+  }
+  .react-grid-item:not(.react-grid-placeholder):hover {
+    background: #ffffff;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 3px 3px;
+  }
+
+
   .react-grid-item img {
     pointer-events: none;
     user-select: none;  
   }
   .react-grid-item.cssTransforms {
     transition-property: transform;
+    
   }
   .react-grid-item.resizing {
     z-index: 1;
     will-change: width, height;
+    
   }
   
   .react-grid-item.react-draggable-dragging {
     transition: none;
     z-index: 3;
     will-change: transform;
+
   }
   
   .react-grid-item.dropping {
@@ -29,7 +86,6 @@
   }
   
   .react-grid-item.react-grid-placeholder {
-    background: red;
     opacity: 0.2;
     transition-duration: 100ms;
     z-index: 2;
@@ -38,6 +94,7 @@
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    background-color: rgb(19, 177, 250);
   }
   
   .react-grid-item > .react-resizable-handle {
@@ -112,3 +169,6 @@
     bottom: 0;
     transform: rotate(45deg);
   }
+.react-grid-item.resizing {
+  opacity: 0.9;
+}
